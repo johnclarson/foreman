@@ -310,6 +310,12 @@ class ComputeResource < ApplicationRecord
   end
   alias_method :set_console_password, :set_console_password?
 
+  # this method is overwritten for EC2
+  def use_iam_role?
+    false
+  end
+  alias_method :use_iam_role, :use_iam_role?
+
   # this method is overwritten for Libvirt and VMware
   def set_console_password=(setpw)
     self.attrs[:setpw] = nil

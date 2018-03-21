@@ -11,6 +11,7 @@ module Foreman::Controller::Parameters::ComputeResource
           :password,
           :provider,
           :set_console_password,
+          :use_iam_role,
           :url,
           :http_proxy_id,
           :user

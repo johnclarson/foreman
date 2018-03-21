@@ -41,6 +41,7 @@ module Api
           param :domain, String, :desc => N_("for OpenStack only")
           param :server, String, :desc => N_("for VMware")
           param :set_console_password, :bool, :desc => N_("for Libvirt and VMware only")
+          param :use_iam_role, :bool, :desc => N_("for EC2 only")
           param :display_type, %w(VNC SPICE), :desc => N_('for Libvirt only')
           param :caching_enabled, :bool, :desc => N_('enable caching, for VMware only')
           param_group :taxonomies, ::Api::V2::BaseController
